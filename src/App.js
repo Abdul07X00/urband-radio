@@ -7,7 +7,7 @@ import AppRoute from './router/appRoute';
 const App = () => {
   return (
     <Provider store={store}>
-      <StatusBar backgroundColor="#fff" barStyle="dark-content" />
+      <StatusBar backgroundColor="#000" />
       <AppRoute />
     </Provider>
   );

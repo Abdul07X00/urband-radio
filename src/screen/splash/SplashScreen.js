@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {View, Text, Image, StatusBar} from 'react-native';
 import styles from './styles';
-import {logo} from '../../assets/icons';
+import {iconLogo} from '../../assets/icons';
 import {onAppStart} from '../../app/appAction';
 
 const SplashScreen = props => {
@@ -19,8 +19,12 @@ const SplashScreen = props => {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#000" barStyle="light-content" />
-      <Image source={logo} resizeMode={'contain'} style={styles.logoImage} />
+      <StatusBar backgroundColor="#000" />
+      <Image
+        source={iconLogo}
+        resizeMode={'contain'}
+        style={styles.logoImage}
+      />
     </View>
   );
 };
