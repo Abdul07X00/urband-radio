@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: 60,
-    borderBottomStartRadius: 15,
-    borderBottomEndRadius: 15,
+    borderBottomStartRadius: 10,
+    borderBottomEndRadius: 10,
   },
   image: {
     height: 40,

@@ -20,6 +20,7 @@
 		37703766902DAE25DC1371E5 /* libPods-urbandradio-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0182F8E5410C21CB0A1F8EE8 /* libPods-urbandradio-tvOS.a */; };
 		5E85C1C4B5A8096E398C904E /* libPods-urbandradio-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FB718058D45F6A007E96EB /* libPods-urbandradio-tvOSTests.a */; };
 		9523644A0A65F2BB2061ECBD /* libPods-urbandradio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 493895477656E70F760D61D8 /* libPods-urbandradio.a */; };
+		430B2730899944EC82DDD61E /* libRCTLiveStream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A295CEE5DE5744AEA143230A /* libRCTLiveStream.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		B49377AE1DE97DFD6BD6CF49 /* libPods-urbandradioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-urbandradioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		B9D4FE01E81A40D19774FB0C /* RCTLiveStream.xcodeproj */ = {isa = PBXFileReference; name = "RCTLiveStream.xcodeproj"; path = "../node_modules/react-native-live-stream/ios/RCTLiveStream.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		A295CEE5DE5744AEA143230A /* libRCTLiveStream.a */ = {isa = PBXFileReference; name = "libRCTLiveStream.a"; path = "libRCTLiveStream.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9523644A0A65F2BB2061ECBD /* libPods-urbandradio.a in Frameworks */,
+				430B2730899944EC82DDD61E /* libRCTLiveStream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +156,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B9D4FE01E81A40D19774FB0C /* RCTLiveStream.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -285,7 +290,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -598,6 +603,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urbandradio.app/urbandradio";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Debug;
 		};
@@ -618,6 +631,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urbandradio.app/urbandradio";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Release;
 		};
@@ -638,6 +659,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = urbandradio;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Debug;
 		};
@@ -657,6 +682,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = urbandradio;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Release;
 		};
@@ -685,6 +714,14 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Debug;
 		};
@@ -713,6 +750,14 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Release;
 		};
@@ -740,6 +785,14 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urbandradio-tvOS.app/urbandradio-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Debug;
 		};
@@ -767,6 +820,14 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/urbandradio-tvOS.app/urbandradio-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-live-stream/ios/RCTLiveStream/**",
+				);
 			};
 			name = Release;
 		};

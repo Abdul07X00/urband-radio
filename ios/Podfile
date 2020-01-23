@@ -34,6 +34,10 @@ target 'urbandradio' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
+  pod 'react-native-nodemediaclient', :path => '../node_modules/react-native-nodemediaclient'
+
   target 'urbandradioTests' do
     inherit! :search_paths
     # Pods for testing
